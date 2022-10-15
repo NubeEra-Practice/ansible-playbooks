@@ -1,0 +1,10 @@
+---
+- name: Display Welcome Message
+  hosts: ws
+  become: yes
+  tasks:
+    - name: pinging to test server is working or not
+      ansible.builtin.ping:
+    - name: Print welcome message
+      ansible.builtin.debug:
+        msg: Welcome to NubeEra
