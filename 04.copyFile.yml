@@ -1,0 +1,11 @@
+---
+- hosts: ws
+  become: yes
+  tasks:
+  - name: Copy file with owner and permissions
+    copy:
+      src: /home/ubuntu/a
+      dest: /home/ubuntu/b
+      owner: ubuntu
+      group: ubuntu
+      mode: '0644'
